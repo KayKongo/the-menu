@@ -12,13 +12,12 @@ const App = () => {
   const [categories, setCategories] = useState(categoriesList);
 
   const filterCategory = (category) => {
-    console.log(`This is the selected category: ${category}`);
     if (category === "all") {
       setMenus(data);
+    } else {
+      const newList = data.filter((menu) => menu.category == category);
+      setMenus(newList);
     }
-    const newList = menus.filter((menu) => menu.category == category);
-    console.log(`This is the new list: ${newList}`);
-    setMenus(newList);
   };
 
   return (

@@ -22,9 +22,11 @@ const App = () => {
 
   return (
     <main>
-      <Title />
-      <Categories states={categories} filter={filterCategory} />
-      <Menu menuItems={menus} />
+      <section className="menu">
+        <Title title="Our Menu" />
+        <Categories states={categories} filter={filterCategory} />
+        <Menu menuItems={menus} />
+      </section>
     </main>
   );
 };

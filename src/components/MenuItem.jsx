@@ -1,12 +1,17 @@
 const MenuItem = ({ id, title, category, price, img, desc }) => {
   return (
-    <div key={id} style={{ padding: "2rem 0" }}>
-      <img src={img} alt={title} style={{ width: "15rem" }} />
-      <h2>{title}</h2>
-      <h3>category: {category}</h3>
-      <h5>price: {price}</h5>
-      <p>description: {desc}</p>
-    </div>
+    <article key={id} className="menu-item">
+      <img src={img} alt={title} className="img" />
+      <div className="item-info">
+        <header>
+          <h5>{title}</h5>
+          <span className="item-price">${price}</span>
+        </header>
+        <p className="item-text">{desc}</p>
+      </div>
+
+      <span>category: {category}</span>
+    </article>
   );
 };
 export default MenuItem;

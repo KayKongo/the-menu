@@ -1,4 +1,4 @@
-const MenuItem = ({ id, title, category, price, img, desc }) => {
+const MenuItem = ({ id, title, price, img, desc }) => {
   return (
     <article key={id} className="menu-item">
       <img src={img} alt={title} className="img" />
@@ -9,8 +9,6 @@ const MenuItem = ({ id, title, category, price, img, desc }) => {
         </header>
         <p className="item-text">{desc}</p>
       </div>
-
-      <span>category: {category}</span>
     </article>
   );
 };
